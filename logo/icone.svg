@@ -1,0 +1,23 @@
+<svg viewBox="0 0 200 200" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ga" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2a6aa8"/>
+      <stop offset="100%" stop-color="#7ab88a"/>
+    </linearGradient>
+    <linearGradient id="gb" x1="100%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#2a6aa8" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#7ab88a" stop-opacity="0.30"/>
+    </linearGradient>
+  </defs>
+
+  <!-- S gauche — plein, dégradé bleu→sauge -->
+  <path d="M 38 36 L 88 36 Q 112 36 112 60 L 112 80 Q 112 104 88 104 L 54 104 Q 30 104 30 128 L 30 148 Q 30 168 54 168 L 106 168"
+        stroke="url(#ga)" stroke-width="7.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- S droit — miroir horizontal, reflet transparent -->
+  <path d="M 160 36 L 110 36 Q 86 36 86 60 L 86 80 Q 86 104 110 104 L 144 104 Q 168 104 168 128 L 168 148 Q 168 168 144 168 L 92 168"
+        stroke="url(#gb)" stroke-width="7.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Ligne centrale verticale fine -->
+  <line x1="99" y1="26" x2="99" y2="176" stroke="rgba(80,120,90,0.22)" stroke-width="0.9"/>
+</svg>

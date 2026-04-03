@@ -1,0 +1,43 @@
+<svg viewBox="0 0 580 130" width="580" height="130" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ga" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2a6aa8"/>
+      <stop offset="100%" stop-color="#7ab88a"/>
+    </linearGradient>
+    <linearGradient id="gb" x1="100%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#2a6aa8" stop-opacity="0.40"/>
+      <stop offset="100%" stop-color="#7ab88a" stop-opacity="0.25"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Fond crème -->
+  <rect width="580" height="130" fill="#f2ede8"/>
+
+  <!-- === ICONE SS === -->
+  <!-- S gauche -->
+  <path d="M 12 14 L 52 14 Q 66 14 66 28 L 66 44 Q 66 58 52 58 L 22 58 Q 8 58 8 72 L 8 88 Q 8 102 22 102 L 62 102"
+        stroke="url(#ga)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- S droit miroir -->
+  <path d="M 118 14 L 78 14 Q 64 14 64 28 L 64 44 Q 64 58 78 58 L 108 58 Q 122 58 122 72 L 122 88 Q 122 102 108 102 L 68 102"
+        stroke="url(#gb)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Ligne centrale SS -->
+  <line x1="65" y1="8" x2="65" y2="108" stroke="rgba(80,120,90,0.20)" stroke-width="0.8"/>
+
+  <!-- Séparateur vertical entre icone et texte -->
+  <line x1="146" y1="14" x2="146" y2="108" stroke="rgba(100,120,110,0.20)" stroke-width="0.8"/>
+
+  <!-- === TEXTE === -->
+  <!-- SERENITY -->
+  <text x="166" y="68" font-family="Syne, sans-serif" font-size="42" font-weight="700" fill="#1e2a24" letter-spacing="2">SERENITY</text>
+
+  <!-- Ligne entre SERENITY et studio -->
+  <line x1="166" y1="76" x2="574" y2="76" stroke="rgba(100,130,110,0.22)" stroke-width="0.7"/>
+
+  <!-- studio -->
+  <text x="169" y="98" font-family="Cormorant Garamond, serif" font-size="17" font-weight="300" fill="#7ab88a" letter-spacing="15" font-style="italic">studio</text>
+
+  <!-- Tagline -->
+  <text x="169" y="118" font-family="DM Sans, sans-serif" font-size="8" font-weight="300" fill="#b0a8a0" letter-spacing="2.5">DIGITAL · TECHNOLOGY · FORMATIONS — BELGIQUE</text>
+</svg>

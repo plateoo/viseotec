@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Serenity Studio — Charte Graphique</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Syne:wght@600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --creme:       #f2ede8;
+    --noir:        #1e2a24;
+    --bleu:        #2a6aa8;
+    --bleu-clair:  #3a88b8;
+    --sauge:       #7ab88a;
+    --sauge-clair: #a8ccb4;
+    --menthe:      #c8ddd0;
+    --gris-texte:  #9a8e84;
+    --gris-border: rgba(0,0,0,0.07);
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--creme);
+    color: var(--noir);
+    min-height: 100vh;
+    padding: 4rem 2rem;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .page { max-width: 1040px; margin: 0 auto; }
+
+  /* ── EN-TÊTE ── */
+  header {
+    border-bottom: 1px solid rgba(0,0,0,0.10);
+    padding-bottom: 2.5rem;
+    margin-bottom: 4rem;
+  }
+  .header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .badge {
+    font-size: 0.62rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--sauge);
+    background: rgba(90,154,106,0.10);
+    border: 1px solid rgba(90,154,106,0.20);
+    border-radius: 20px;
+    padding: 0.3rem 0.9rem;
+  }
+  .version { font-size: 0.72rem; color: var(--gris-texte); }
+
+  /* ── SECTIONS ── */
+  section { margin-bottom: 5rem; }
+  .section-label {
+    font-size: 0.62rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--sauge);
+    margin-bottom: 0.5rem;
+  }
+  h2 {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--noir);
+    margin-bottom: 0.4rem;
+  }
+  .section-desc {
+    font-size: 0.85rem;
+    color: var(--gris-texte);
+    margin-bottom: 2.5rem;
+    max-width: 540px;
+  }
+
+  /* ── CARTES LOGO ── */
+  .logo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+  }
+  .logo-card {
+    border-radius: 16px;
+    border: 1px solid var(--gris-border);
+    overflow: hidden;
+  }
+  .logo-card-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 2rem;
+    min-height: 160px;
+  }
+  .logo-card-inner.creme  { background: var(--creme); }
+  .logo-card-inner.blanc  { background: #ffffff; }
+  .logo-card-inner.sombre { background: var(--noir); }
+  .logo-card-meta {
+    padding: 0.9rem 1.2rem;
+    background: #fff;
+    border-top: 1px solid var(--gris-border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo-card.dark .logo-card-meta { background: #2c3c34; border-top-color: rgba(255,255,255,0.07); }
+  .logo-card-name { font-size: 0.72rem; font-weight: 500; color: var(--noir); }
+  .logo-card.dark .logo-card-name { color: #f2ede8; }
+  .logo-card-file { font-size: 0.62rem; color: var(--gris-texte); font-family: monospace; }
+
+  /* Icone seul */
+  .icon-showcase {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    margin-bottom: 2rem;
+  }
+  .icon-size {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  .icon-size span {
+    font-size: 0.62rem;
+    color: var(--gris-texte);
+    letter-spacing: 0.1em;
+  }
+  .icon-bg-creme  { background: var(--creme); border-radius: 12px; padding: 1rem; border: 1px solid var(--gris-border); }
+  .icon-bg-sombre { background: var(--noir);  border-radius: 12px; padding: 1rem; }
+
+  /* ── PHRASE SIGNATURE ── */
+  .phrase-card {
+    background: #fff;
+    border-radius: 16px;
+    border: 1px solid var(--gris-border);
+    padding: 3rem 3.5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  .phrase-principale {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.9rem;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--noir);
+    line-height: 1.5;
+    margin-bottom: 0.8rem;
+  }
+  .phrase-principale em { color: var(--sauge); font-style: italic; }
+  .phrase-note { font-size: 0.78rem; color: var(--gris-texte); }
+
+  .phrase-card-sombre {
+    background: var(--noir);
+    border-color: rgba(255,255,255,0.06);
+  }
+  .phrase-card-sombre .phrase-principale { color: var(--creme); }
+  .phrase-card-sombre .phrase-note { color: rgba(242,237,232,0.35); }
+
+  /* ── PALETTE ── */
+  .palette-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 1rem;
+  }
+  .swatch {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--gris-border);
+  }
+  .swatch-color { height: 72px; }
+  .swatch-info {
+    padding: 0.6rem 0.8rem;
+    background: #fff;
+  }
+  .swatch-name { font-size: 0.72rem; font-weight: 500; color: var(--noir); }
+  .swatch-hex  { font-size: 0.62rem; color: var(--gris-texte); font-family: monospace; margin-top: 2px; }
+  .swatch-role { font-size: 0.60rem; color: #c0b8b0; margin-top: 3px; line-height: 1.4; }
+
+  /* Combos dégradés */
+  .gradient-row { display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap; }
+  .grad-card {
+    flex: 1;
+    min-width: 200px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--gris-border);
+  }
+  .grad-bar { height: 60px; }
+  .grad-info {
+    background: #fff;
+    padding: 0.6rem 0.9rem;
+    font-size: 0.68rem;
+    color: var(--gris-texte);
+  }
+  .grad-info strong { display: block; font-size: 0.72rem; color: var(--noir); font-weight: 500; margin-bottom: 2px; }
+
+  /* ── TYPOGRAPHIES ── */
+  .typo-block {
+    background: #fff;
+    border-radius: 16px;
+    border: 1px solid var(--gris-border);
+    padding: 2.5rem 3rem;
+    margin-bottom: 1.2rem;
+  }
+  .typo-meta {
+    display: flex;
+    align-items: baseline;
+    gap: 1.2rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .typo-family { font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--sauge); font-weight: 500; }
+  .typo-role   { font-size: 0.68rem; color: var(--gris-texte); }
+
+  .syne-specimen    { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 2.8rem; color: var(--noir); line-height: 1.15; letter-spacing: 1px; }
+  .syne-sub         { font-family: 'Syne', sans-serif; font-weight: 600; font-size: 1.3rem; color: var(--noir); margin-top: 0.8rem; }
+  .cormo-specimen   { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 2.2rem; font-weight: 300; color: var(--noir); line-height: 1.4; }
+  .cormo-sub        { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 400; color: var(--gris-texte); margin-top: 0.6rem; }
+  .dmsans-specimen  { font-family: 'DM Sans', sans-serif; font-size: 1rem; font-weight: 400; color: var(--noir); max-width: 480px; line-height: 1.7; }
+  .dmsans-small     { font-family: 'DM Sans', sans-serif; font-size: 0.78rem; font-weight: 300; color: var(--gris-texte); margin-top: 0.6rem; letter-spacing: 0.08em; }
+
+  .typo-scale {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+    align-items: baseline;
+    border-top: 1px solid var(--gris-border);
+    padding-top: 1.5rem;
+  }
+  .typo-scale-item { text-align: center; }
+  .typo-scale-item span { display: block; font-size: 0.58rem; color: #c0b8b0; margin-top: 0.3rem; font-family: monospace; }
+
+  /* ── USAGES ── */
+  .usage-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+  }
+  @media (max-width: 640px) { .usage-grid { grid-template-columns: 1fr; } }
+  .usage-card {
+    border-radius: 12px;
+    border: 1px solid var(--gris-border);
+    padding: 1.5rem 1.8rem;
+    background: #fff;
+  }
+  .usage-card.do   { border-left: 3px solid var(--sauge); }
+  .usage-card.dont { border-left: 3px solid #d08080; }
+  .usage-card h4 {
+    font-size: 0.68rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  .usage-card.do h4   { color: var(--sauge); }
+  .usage-card.dont h4 { color: #d08080; }
+  .usage-card ul { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+  .usage-card ul li { font-size: 0.82rem; color: #4a5a50; padding-left: 1rem; position: relative; }
+  .usage-card ul li::before { content: '—'; position: absolute; left: 0; color: #c0c8c0; }
+
+  /* ── ESPACES LIBRES ── */
+  .clear-space {
+    background: #fff;
+    border-radius: 16px;
+    border: 1px solid var(--gris-border);
+    padding: 2rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+  }
+  .clear-zone {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: repeating-linear-gradient(
+      45deg,
+      rgba(90,154,106,0.04) 0px,
+      rgba(90,154,106,0.04) 1px,
+      transparent 1px,
+      transparent 10px
+    );
+  }
+  .clear-inner { position: relative; z-index: 1; text-align: center; }
+  .clear-note { font-size: 0.72rem; color: var(--gris-texte); margin-top: 0.8rem; }
+
+  /* ── FOOTER ── */
+  footer {
+    border-top: 1px solid rgba(0,0,0,0.08);
+    padding-top: 2rem;
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  footer p { font-size: 0.72rem; color: var(--gris-texte); }
+  footer strong { color: var(--sauge); }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- EN-TÊTE -->
+  <header>
+    <div class="header-top">
+      <svg viewBox="0 0 200 60" width="180" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="ha" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#2a6aa8"/><stop offset="100%" stop-color="#7ab88a"/></linearGradient>
+          <linearGradient id="hb" x1="100%" y1="100%" x2="0%" y2="0%"><stop offset="0%" stop-color="#2a6aa8" stop-opacity="0.40"/><stop offset="100%" stop-color="#7ab88a" stop-opacity="0.25"/></linearGradient>
+        </defs>
+        <path d="M 4 5 L 24 5 Q 31 5 31 12 L 31 20 Q 31 27 24 27 L 10 27 Q 3 27 3 34 L 3 42 Q 3 49 10 49 L 30 49" stroke="url(#ha)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M 56 5 L 36 5 Q 29 5 29 12 L 29 20 Q 29 27 36 27 L 50 27 Q 57 27 57 34 L 57 42 Q 57 49 50 49 L 30 49" stroke="url(#hb)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <line x1="30" y1="3" x2="30" y2="51" stroke="rgba(80,120,90,0.20)" stroke-width="0.6"/>
+        <line x1="68" y1="6" x2="68" y2="50" stroke="rgba(100,120,110,0.18)" stroke-width="0.6"/>
+        <text x="76" y="33" font-family="Syne, sans-serif" font-size="18" font-weight="700" fill="#1e2a24" letter-spacing="1">SERENITY</text>
+        <text x="77" y="46" font-family="Cormorant Garamond, serif" font-size="8" font-weight="300" fill="#7ab88a" letter-spacing="7" font-style="italic">studio</text>
+      </svg>
+      <div style="text-align:right">
+        <div class="badge">Charte Graphique</div>
+        <div class="version" style="margin-top:.4rem">Version 1.0 · Mars 2026</div>
+      </div>
+    </div>
+    <p style="font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--gris-texte);font-size:1rem">
+      Ce document définit les règles d'usage de l'identité visuelle Serenity Studio. <br>
+      À respecter sur tous les supports — digitaux, print et communications.
+    </p>
+  </header>
+
+
+  <!-- ══════════════════════════════════ 1. LOGOS ══════════════════════════════════ -->
+  <section id="logos">
+    <div class="section-label">01 — Identité</div>
+    <h2>Logo & Icône</h2>
+    <p class="section-desc">Deux variantes du logo complet (clair / sombre) et l'icône SS utilisable seule en petit format ou en favicon.</p>
+
+    <div class="logo-grid">
+
+      <!-- Logo clair -->
+      <div class="logo-card">
+        <div class="logo-card-inner creme">
+          <svg viewBox="0 0 580 130" width="100%" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="lca" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#2a6aa8"/><stop offset="100%" stop-color="#7ab88a"/></linearGradient>
+              <linearGradient id="lcb" x1="100%" y1="100%" x2="0%" y2="0%"><stop offset="0%" stop-color="#2a6aa8" stop-opacity="0.40"/><stop offset="100%" stop-color="#7ab88a" stop-opacity="0.25"/></linearGradient>
+            </defs>
+            <path d="M 12 14 L 52 14 Q 66 14 66 28 L 66 44 Q 66 58 52 58 L 22 58 Q 8 58 8 72 L 8 88 Q 8 102 22 102 L 62 102" stroke="url(#lca)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M 118 14 L 78 14 Q 64 14 64 28 L 64 44 Q 64 58 78 58 L 108 58 Q 122 58 122 72 L 122 88 Q 122 102 108 102 L 68 102" stroke="url(#lcb)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <line x1="65" y1="8" x2="65" y2="108" stroke="rgba(80,120,90,0.20)" stroke-width="0.8"/>
+            <line x1="146" y1="14" x2="146" y2="108" stroke="rgba(100,120,110,0.20)" stroke-width="0.8"/>
+            <text x="166" y="68" font-family="Syne, sans-serif" font-size="42" font-weight="700" fill="#1e2a24" letter-spacing="2">SERENITY</text>
+            <line x1="166" y1="76" x2="574" y2="76" stroke="rgba(100,130,110,0.22)" stroke-width="0.7"/>
+            <text x="169" y="98" font-family="Cormorant Garamond, serif" font-size="17" font-weight="300" fill="#7ab88a" letter-spacing="15" font-style="italic">studio</text>
+            <text x="169" y="118" font-family="DM Sans, sans-serif" font-size="8" font-weight="300" fill="#b0a8a0" letter-spacing="2.5">DIGITAL · TECHNOLOGY · FORMATIONS — BELGIQUE</text>
+          </svg>
+        </div>
+        <div class="logo-card-meta">
+          <span class="logo-card-name">Logo — Fond crème</span>
+          <span class="logo-card-file">logo-clair.svg</span>
+        </div>
+      </div>
+
+      <!-- Logo sombre -->
+      <div class="logo-card dark">
+        <div class="logo-card-inner sombre">
+          <svg viewBox="0 0 580 130" width="100%" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="lsa" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#3a88b8"/><stop offset="100%" stop-color="#a8ccb4"/></linearGradient>
+              <linearGradient id="lsb" x1="100%" y1="100%" x2="0%" y2="0%"><stop offset="0%" stop-color="#3a88b8" stop-opacity="0.42"/><stop offset="100%" stop-color="#a8ccb4" stop-opacity="0.26"/></linearGradient>
+            </defs>
+            <path d="M 12 14 L 52 14 Q 66 14 66 28 L 66 44 Q 66 58 52 58 L 22 58 Q 8 58 8 72 L 8 88 Q 8 102 22 102 L 62 102" stroke="url(#lsa)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M 118 14 L 78 14 Q 64 14 64 28 L 64 44 Q 64 58 78 58 L 108 58 Q 122 58 122 72 L 122 88 Q 122 102 108 102 L 68 102" stroke="url(#lsb)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <line x1="65" y1="8" x2="65" y2="108" stroke="rgba(180,210,190,0.18)" stroke-width="0.8"/>
+            <line x1="146" y1="14" x2="146" y2="108" stroke="rgba(180,210,190,0.18)" stroke-width="0.8"/>
+            <text x="166" y="68" font-family="Syne, sans-serif" font-size="42" font-weight="700" fill="#f2ede8" letter-spacing="2">SERENITY</text>
+            <line x1="166" y1="76" x2="574" y2="76" stroke="rgba(180,210,190,0.22)" stroke-width="0.7"/>
+            <text x="169" y="98" font-family="Cormorant Garamond, serif" font-size="17" font-weight="300" fill="#a8ccb4" letter-spacing="15" font-style="italic">studio</text>
+            <text x="169" y="118" font-family="DM Sans, sans-serif" font-size="8" font-weight="300" fill="#6a7a70" letter-spacing="2.5">DIGITAL · TECHNOLOGY · FORMATIONS — BELGIQUE</text>
+          </svg>
+        </div>
+        <div class="logo-card-meta">
+          <span class="logo-card-name">Logo — Fond sombre</span>
+          <span class="logo-card-file">logo-sombre.svg</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Icône SS -->
+    <h3 style="font-family:'Syne',sans-serif;font-size:1rem;margin:2.5rem 0 1rem;color:var(--noir)">Icône SS — toutes tailles</h3>
+    <div class="icon-showcase">
+      <div class="icon-size">
+        <div class="icon-bg-creme">
+          <svg viewBox="0 0 200 200" width="80" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="ia" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#2a6aa8"/><stop offset="100%" stop-color="#7ab88a"/></linearGradient><linearGradient id="ib" x1="100%" y1="100%" x2="0%" y2="0%"><stop offset="0%" stop-color="#2a6aa8" stop-opacity="0.45"/><stop offset="100%" stop-color="#7ab88a" stop-opacity="0.30"/></linearGradient></defs>
+            <path d="M 38 36 L 88 36 Q 112 36 112 60 L 112 80 Q 112 104 88 104 L 54 104 Q 30 104 30 128 L 30 148 Q 30 168 54 168 L 106 168" stroke="url(#ia)" stroke-width="7.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M 160 36 L 110 36 Q 86 36 86 60 L 86 80 Q 86 104 110 104 L 144 104 Q 168 104 168 128 L 168 148 Q 168 168 144 168 L 92 168" stroke="url(#ib)" stroke-width="7.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <line x1="99" y1="26" x2="99" y2="176" stroke="rgba(80,120,90,0.22)" stroke-width="0.9"/>
+          </svg>
+        </div>
+        <span>80px</span>
+      </div>
+      <div class="icon-size">
+        <div class="icon-bg-creme">
+          <svg viewBox="0 0 200 200" width="48" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="ic" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#2a6aa8"/><stop offset="100%" stop-color="#7ab88a"/></linearGradient><linearGradient id="id" x1="100%" y1="100%" x2="0%" y2="0%"><stop offset="0%" stop-color="#2a6aa8" stop-opacity="0.45"/><stop offset="100%" stop-color="#7ab88a" stop-opacity="0.30"/></linearGradient></defs>
+            <path d="M 38 36 L 88 36 Q 112 36 112 60 L 112 80 Q 112 104 88 104 L 54 104 Q 30 104 30 128 L 30 148 Q 30 168 54 168 L 106 168" stroke="url(#ic)" stroke-width="7.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M 160 36 L 110 36 Q 86 36 86 60 L 86 80 Q 86 104 110 104 L 144 104 Q 168 104 168 128 L 168 148 Q 168 168 144 168 L 92 168" stroke="url(#id)" stroke-width="7.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <line x1="99" y1="26" x2="99" y2="176" stroke="rgba(80,120,90,0.22)" stroke-width="0.9"/>
+          </svg>
+        </div>
+        <span>48px</span>
+      </div>
+      <div class="icon-size">
+        <div class="icon-bg-creme">
+          <svg viewBox="0 0 200 200" width="32" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="ie" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#2a6aa8"/><stop offset="100%" stop-color="#7ab88a"/></linearGradient><linearGradient id="if" x1="100%" y1="100%" x2="0%" y2="0%"><stop offset="0%" stop-color="#2a6aa8" stop-opacity="0.45"/><stop offset="100%" stop-color="#7ab88a" stop-opacity="0.30"/></linearGradient></defs>
+            <path d="M 38 36 L 88 36 Q 112 36 112 60 L 112 80 Q 112 104 88 104 L 54 104 Q 30 104 30 128 L 30 148 Q 30 168 54 168 L 106 168" stroke="url(#ie)" stroke-width="7.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M 160 36 L 110 36 Q 86 36 86 60 L 86 80 Q 86 104 110 104 L 144 104 Q 168 104 168 128 L 168 148 Q 168 168 144 168 L 92 168" stroke="url(#if)" stroke-width="7.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <line x1="99" y1="26" x2="99" y2="176" stroke="rgba(80,120,90,0.22)" stroke-width="0.9"/>
+          </svg>
+        </div>
+        <span>32px</span>
+      </div>
+      <div class="icon-size">
+        <div class="icon-bg-sombre">
+          <svg viewBox="0 0 200 200" width="80" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="ig" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#3a88b8"/><stop offset="100%" stop-color="#a8ccb4"/></linearGradient><linearGradient id="ih" x1="100%" y1="100%" x2="0%" y2="0%"><stop offset="0%" stop-color="#3a88b8" stop-opacity="0.42"/><stop offset="100%" stop-color="#a8ccb4" stop-opacity="0.26"/></linearGradient></defs>
+            <path d="M 38 36 L 88 36 Q 112 36 112 60 L 112 80 Q 112 104 88 104 L 54 104 Q 30 104 30 128 L 30 148 Q 30 168 54 168 L 106 168" stroke="url(#ig)" stroke-width="7.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M 160 36 L 110 36 Q 86 36 86 60 L 86 80 Q 86 104 110 104 L 144 104 Q 168 104 168 128 L 168 148 Q 168 168 144 168 L 92 168" stroke="url(#ih)" stroke-width="7.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <line x1="99" y1="26" x2="99" y2="176" stroke="rgba(180,210,190,0.18)" stroke-width="0.9"/>
+          </svg>
+        </div>
+        <span style="color:#6a7a70">80px sombre</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════ 2. PHRASE SIGNATURE ══════════════════════════════════ -->
+  <section id="signature">
+    <div class="section-label">02 — Signature</div>
+    <h2>Phrase signature</h2>
+    <p class="section-desc">Utilisée en hero, en footer, sur tous les supports. Jamais modifiée, jamais tronquée.</p>
+
+    <div class="phrase-card">
+      <p class="phrase-principale">"Votre histoire existe déjà.<br><em>On lui donne une image.</em>"</p>
+      <p class="phrase-note">Cormorant Garamond · Italic · 400 — utilisation sur fond clair</p>
+    </div>
+    <div class="phrase-card phrase-card-sombre">
+      <p class="phrase-principale">"Votre histoire existe déjà.<br><em>On lui donne une image.</em>"</p>
+      <p class="phrase-note">Cormorant Garamond · Italic · 400 — utilisation sur fond sombre</p>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════ 3. PALETTE ══════════════════════════════════ -->
+  <section id="palette">
+    <div class="section-label">03 — Couleurs</div>
+    <h2>Palette</h2>
+    <p class="section-desc">Palette nature & technologie — crème chaud, verts sauge, bleus doux. Ni froid ni agressif.</p>
+
+    <div class="palette-grid">
+      <div class="swatch">
+        <div class="swatch-color" style="background:#f2ede8; border:1px solid rgba(0,0,0,0.06);"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Crème</div>
+          <div class="swatch-hex">#f2ede8</div>
+          <div class="swatch-role">Fond principal · Arrière-plans</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#1e2a24;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Noir doux</div>
+          <div class="swatch-hex">#1e2a24</div>
+          <div class="swatch-role">Titres · Texte principal</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#2a6aa8;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Bleu</div>
+          <div class="swatch-hex">#2a6aa8</div>
+          <div class="swatch-role">Accents · CTA · Logo gauche</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#3a88b8;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Bleu clair</div>
+          <div class="swatch-hex">#3a88b8</div>
+          <div class="swatch-role">Hover · Dégradé clair</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#7ab88a;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Sauge foncé</div>
+          <div class="swatch-hex">#7ab88a</div>
+          <div class="swatch-role">Sous-titres · Studio · Logo</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#a8ccb4;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Sauge clair</div>
+          <div class="swatch-hex">#a8ccb4</div>
+          <div class="swatch-role">Fond sections · Icônes légères</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#c8ddd0;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Menthe</div>
+          <div class="swatch-hex">#c8ddd0</div>
+          <div class="swatch-role">Tags · Badges · Accents très doux</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gradient-row">
+      <div class="grad-card">
+        <div class="grad-bar" style="background:linear-gradient(135deg, #2a6aa8, #7ab88a);"></div>
+        <div class="grad-info"><strong>Dégradé principal</strong>#2a6aa8 → #7ab88a · 135°</div>
+      </div>
+      <div class="grad-card">
+        <div class="grad-bar" style="background:linear-gradient(135deg, #3a88b8, #a8ccb4);"></div>
+        <div class="grad-info"><strong>Dégradé clair</strong>#3a88b8 → #a8ccb4 · 135°</div>
+      </div>
+      <div class="grad-card">
+        <div class="grad-bar" style="background:linear-gradient(135deg, rgba(42,106,168,0.45), rgba(90,154,106,0.30));"></div>
+        <div class="grad-info"><strong>Dégradé reflet (logo S droit)</strong>Opacités réduites · effet miroir</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════ 4. TYPOGRAPHIES ══════════════════════════════════ -->
+  <section id="typo">
+    <div class="section-label">04 — Typographies</div>
+    <h2>Système typographique</h2>
+    <p class="section-desc">Trois familles complémentaires — force, élégance, lisibilité. Importées depuis Google Fonts.</p>
+
+    <div class="typo-block">
+      <div class="typo-meta">
+        <span class="typo-family">Syne</span>
+        <span class="typo-role">Titres · Logo · Navigation · 700–800</span>
+      </div>
+      <div class="syne-specimen">SERENITY STUDIO</div>
+      <div class="syne-sub">Digital · Technologie · Formations</div>
+      <div class="typo-scale">
+        <div class="typo-scale-item"><span style="font-family:'Syne',sans-serif;font-weight:700;font-size:2.8rem;color:var(--noir)">Aa</span><span>2.8rem / 700</span></div>
+        <div class="typo-scale-item"><span style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.8rem;color:var(--noir)">Aa</span><span>1.8rem / 700</span></div>
+        <div class="typo-scale-item"><span style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.2rem;color:var(--noir)">Aa</span><span>1.2rem / 700</span></div>
+        <div class="typo-scale-item"><span style="font-family:'Syne',sans-serif;font-weight:600;font-size:0.9rem;color:var(--noir)">Aa</span><span>0.9rem / 600</span></div>
+      </div>
+    </div>
+
+    <div class="typo-block">
+      <div class="typo-meta">
+        <span class="typo-family">Cormorant Garamond</span>
+        <span class="typo-role">Sous-titres · Phrases · Citations · Italique</span>
+      </div>
+      <div class="cormo-specimen">"Votre histoire existe déjà.<br><span style="color:var(--sauge)">On lui donne une image.</span>"</div>
+      <div class="cormo-sub">Élégance, authenticité, profondeur — des mots qui respirent.</div>
+      <div class="typo-scale">
+        <div class="typo-scale-item"><span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:2.2rem;color:var(--noir)">Aa</span><span>2.2rem / 300 italic</span></div>
+        <div class="typo-scale-item"><span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.4rem;color:var(--noir)">Aa</span><span>1.4rem / 400 italic</span></div>
+        <div class="typo-scale-item"><span style="font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--noir)">Aa</span><span>1rem / 400</span></div>
+      </div>
+    </div>
+
+    <div class="typo-block">
+      <div class="typo-meta">
+        <span class="typo-family">DM Sans</span>
+        <span class="typo-role">Corps de texte · Labels · Interface · 300–500</span>
+      </div>
+      <div class="dmsans-specimen">Serenity Studio accompagne les PME belges dans leur transformation digitale. Sites web, automatisation IA, formations sur mesure — nous révélons votre image.</div>
+      <div class="dmsans-small">DIGITAL · TECHNOLOGY · FORMATIONS — BELGIQUE &nbsp;·&nbsp; letterspacing: 0.2em</div>
+      <div class="typo-scale">
+        <div class="typo-scale-item"><span style="font-family:'DM Sans',sans-serif;font-weight:400;font-size:1rem;color:var(--noir)">Aa</span><span>1rem / 400</span></div>
+        <div class="typo-scale-item"><span style="font-family:'DM Sans',sans-serif;font-weight:300;font-size:0.88rem;color:var(--noir)">Aa</span><span>0.88rem / 300</span></div>
+        <div class="typo-scale-item"><span style="font-family:'DM Sans',sans-serif;font-weight:500;font-size:0.78rem;color:var(--noir)">Aa</span><span>0.78rem / 500</span></div>
+        <div class="typo-scale-item"><span style="font-family:'DM Sans',sans-serif;font-weight:300;font-size:0.62rem;color:var(--noir);letter-spacing:.18em;text-transform:uppercase">AA</span><span>0.62rem caps</span></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════ 5. USAGES ══════════════════════════════════ -->
+  <section id="usages">
+    <div class="section-label">05 — Règles d'usage</div>
+    <h2>À faire · À éviter</h2>
+    <p class="section-desc">Ces règles garantissent la cohérence de la marque sur tous les supports.</p>
+
+    <div class="usage-grid">
+      <div class="usage-card do">
+        <h4>✓ À faire</h4>
+        <ul>
+          <li>Utiliser le logo sur fond crème ou fond #1e2a24</li>
+          <li>Respecter l'espace vide autour du logo (½ hauteur du S)</li>
+          <li>Utiliser Syne en 700+ pour tous les titres</li>
+          <li>Associer l'italic Cormorant aux phrases fortes</li>
+          <li>Maintenir le ratio icon / texte du logo</li>
+          <li>Utiliser le dégradé #2a6aa8→#7ab88a pour les CTA</li>
+        </ul>
+      </div>
+      <div class="usage-card dont">
+        <h4>✗ À éviter</h4>
+        <ul>
+          <li>Déformer ou étirer le logo (scale uniforme uniquement)</li>
+          <li>Utiliser le logo sur fond coloré saturé</li>
+          <li>Changer les couleurs du dégradé SS</li>
+          <li>Mettre la phrase signature entre guillemets droits</li>
+          <li>Utiliser Cormorant Garamond en gras (uniquement 300–400)</li>
+          <li>Mélanger plus de 3 couleurs de la palette par élément</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="clear-space" style="margin-top:1.5rem">
+      <div class="clear-zone"></div>
+      <div class="clear-inner">
+        <svg viewBox="0 0 200 200" width="64" xmlns="http://www.w3.org/2000/svg">
+          <defs><linearGradient id="cla" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#2a6aa8"/><stop offset="100%" stop-color="#7ab88a"/></linearGradient><linearGradient id="clb" x1="100%" y1="100%" x2="0%" y2="0%"><stop offset="0%" stop-color="#2a6aa8" stop-opacity="0.45"/><stop offset="100%" stop-color="#7ab88a" stop-opacity="0.30"/></linearGradient></defs>
+          <path d="M 38 36 L 88 36 Q 112 36 112 60 L 112 80 Q 112 104 88 104 L 54 104 Q 30 104 30 128 L 30 148 Q 30 168 54 168 L 106 168" stroke="url(#cla)" stroke-width="7.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M 160 36 L 110 36 Q 86 36 86 60 L 86 80 Q 86 104 110 104 L 144 104 Q 168 104 168 128 L 168 148 Q 168 168 144 168 L 92 168" stroke="url(#clb)" stroke-width="7.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <line x1="99" y1="26" x2="99" y2="176" stroke="rgba(80,120,90,0.22)" stroke-width="0.9"/>
+          <!-- Zone de protection -->
+          <rect x="14" y="12" width="172" height="176" fill="none" stroke="rgba(90,154,106,0.35)" stroke-width="1.5" stroke-dasharray="6 4" rx="2"/>
+        </svg>
+        <p class="clear-note">Zone de protection : ½ hauteur du S tout autour du logo. Aucun élément dans cette zone.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Serenity Studio · Charte Graphique v1.0 · Mars 2026</p>
+    <p>Opéré sous <strong>Serenity Belgium</strong> · Belgique</p>
+  </footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<svg viewBox="0 0 512 512" width="512" height="512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ga" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2a6aa8"/>
+      <stop offset="100%" stop-color="#7ab88a"/>
+    </linearGradient>
+    <linearGradient id="gb" x1="100%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#2a6aa8" stop-opacity="0.42"/>
+      <stop offset="100%" stop-color="#7ab88a" stop-opacity="0.28"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Fond carré arrondi crème -->
+  <rect width="512" height="512" rx="100" ry="100" fill="#f2ede8"/>
+
+  <!-- === SS centré === -->
+  <!-- S gauche — plein -->
+  <path d="M 96 90 L 224 90 Q 272 90 272 138 L 272 194 Q 272 242 224 242 L 128 242 Q 80 242 80 290 L 80 348 Q 80 396 128 396 L 258 396"
+        stroke="url(#ga)" stroke-width="20" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- S droit — miroir, reflet -->
+  <path d="M 416 90 L 288 90 Q 240 90 240 138 L 240 194 Q 240 242 288 242 L 384 242 Q 432 242 432 290 L 432 348 Q 432 396 384 396 L 254 396"
+        stroke="url(#gb)" stroke-width="20" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Ligne centrale verticale fine -->
+  <line x1="256" y1="68" x2="256" y2="446" stroke="rgba(80,120,90,0.22)" stroke-width="2.5"/>
+</svg>
